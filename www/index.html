@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
   <script src="components/loader.js"></script>
+<script src="components/action.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
-
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -28,48 +28,5 @@
             </div>
         </div>
     </main>
-
-<script>
-    function Mostar(){
-
-    var Nome = document.getElementById("name").value;
-    function alertDismissed() {
-    // do something
-}
-navigator.notification.alert(
-    'Bem vindo '+Nome,  // message
-    alertDismissed,         // callback
-    'Seja bem vindo',            // title
-    'Ok'                  // buttonName
-);
-}
-function MostraIdade(){
-
-    var Idade = parseInt(document.getElementById("IdadeHtml").value);
-
-    if (Idade >= 18 ){
-        function onConfirm(buttonIndex) {
-            if(buttonIndex == 1 ){
-    alert('Obrigado por se Alistar ');
-        }
-            else{
-                 alert('Vai lava loça');
-            }
-
-} 
-    navigator.notification.confirm(
-    'Qual seu sexo?', // message
-     onConfirm,            // callback to invoke with index of button pressed
-    'Alerta',           // title
-    ['Homem','Mulher']    
-);
-    }
-}
-
-function Sair(){
-    navigator.vibrate(3000);
-    navigator.app.exitApp();
-}
-</script>
 </body>
 </html>
